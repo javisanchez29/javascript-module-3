@@ -159,10 +159,13 @@ body {
   width: 200px;
   background-color: lightblue;
   padding-top: 20px;
+  float: left;
 }
 
 #main {
-  background-color: rgb(222, 222, 189);
+
+  padding: 20px;
+  margin-left: 200px;
 }
 
 .episodeLink {
@@ -175,4 +178,44 @@ body {
   background-color: black;
   color: white;
   cursor: pointer;
+}
+
+#main > h2 {
+  font-size: 2.8rem;
+}
+#main > h3 {
+  font-size: 1.2rem;
+  margin-top: 12px;
+}
+
+#charactersContainer {
+  margin-top : 20px;
+}
+
+.characterThumbnail {
+  width: 320px;
+  padding: 10px;
+  display: inline-block;
+
+}
+
+.characterThumbnail:hover {
+  background-color: #e1e1e1;
+}
+
+.characterThumbnail > img {
+  width: 300px;
+  height: 250px;
+  margin:10px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.characterThumbnail > h4 {
+  margin: 10px;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.characterThumbnail > h5 {
+  margin: 10px;
+  font-size: 1.1rem;
 }

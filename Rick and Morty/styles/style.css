@@ -128,14 +128,10 @@ table {
 
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  min-height: 100vh;
 }
 
 #root {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Header */
@@ -145,6 +141,8 @@ body {
   background-color: rgba(181, 40, 40, 0.651);
   height: 60px;
   width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 #header h1 {
@@ -153,32 +151,27 @@ body {
   margin-left: 20px;
 }
 #content {
-  display: table;
-  position: fixed;
   width: 100%;
   height: 100%;
   padding-top: 60px;
 }
 #sidebar {
   width: 200px;
-  display: table-cell;
-  vertical-align: top;
   background-color: lightblue;
   padding-top: 20px;
 }
 
 #main {
-  display: table-cell;
   background-color: rgb(222, 222, 189);
 }
 
-.chapterLink {
+.episodeLink {
   display: block;
-  padding: 5px;
+  padding: 10px;
   color: black;
 }
 
-.chapterLink:hover {
+.episodeLink:hover {
   background-color: black;
   color: white;
   cursor: pointer;

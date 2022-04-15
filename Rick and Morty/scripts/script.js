@@ -2,14 +2,17 @@ function buildRoot() {
   const root = document.getElementById("root")
   root.innerHTML =
     '<div id="content">' +
-      '<div id="sidebar"><div id="episodes"></div></div>' +
+      '<div id="sidebar">' +
+        '<div id="episodes"></div>' +
+        '<button id="loadMore">Load More</button>' +
+      '</div>' +
       '<div id="main"></div>' +
     '</div>' +
     '<div id="header"><h1>Rick and Morty API</h1></div>'
 }
 
-function loadEpisodes() {
-  fetch("https://rickandmortyapi.com/api/episode")
+function loadEpisodes(url) {
+  fetch(url || "https://rickandmortyapi.com/api/episode")
     .then(res => res.json())
     .then(episodes => showEpisodeLinks(episodes))
     .catch(reason => console.log(reason))
@@ -20,6 +23,13 @@ function showEpisodeLinks(episodes) {
   episodes.results
     .map(createEpisodeLink)
     .forEach(node => episodesContainer.appendChild(node))
+  const loadMore = document.getElementById("loadMore")
+  if (episodes.info.next) {
+    loadMore.onclick = () => loadEpisodes(episodes.info.next)
+  } else {
+    loadMore.classList.add("hidden")
+  }
+
 }
 
 function createEpisodeLink(episode) {

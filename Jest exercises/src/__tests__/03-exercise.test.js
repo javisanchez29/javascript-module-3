@@ -8,6 +8,9 @@ describe("03-exercises", () => {
     const numbers = [1, 2, 3, 4, 5];
     const expected = [2, 4, 6, 8, 10];
 
+    let result = multiplyNums(numbers)
+    expect(result).toStrictEqual(expected)
+
     expect.assertions(1);
 
     /**
@@ -21,6 +24,7 @@ describe("03-exercises", () => {
   test("multiplyNums doesn't mutate the original array", () => {
     const numbers = [1, 2, 3, 4, 5];
 
+
     expect.assertions(1);
 
     /**
@@ -31,6 +35,9 @@ describe("03-exercises", () => {
      */
 
     // Write the assertion
+
+    let result = multiplyNums(numbers)
+    expect(result).not.toBe(numbers)
   });
 
   test("sanitizeUserData returns an object without sensitive information", () => {
@@ -58,5 +65,7 @@ describe("03-exercises", () => {
      * to see of calling the function with `userWithSensitiveInformation`
      * returns an object that has the same `key: value` pairs as the `safeUserData`
      */
+    let result = sanitizeUserData(userWithSensitiveInformation)
+    expect(result).toBe(safeUserData)
   });
 });

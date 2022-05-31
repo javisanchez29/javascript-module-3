@@ -27,12 +27,12 @@
 // Create the Person class
 class Person {
     constructor(firstName,lastName){
-    this.firstName=firstName
-    this.lastName=lastName
+        this.firstName = firstName
+        this.lastName = lastName
     }
 
     sayName(){
-        return this.firstName+" "+this.lastName
+        return `${this.firstName} ${this.lastName}`
     }
 }
 

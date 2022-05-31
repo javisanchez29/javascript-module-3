@@ -22,9 +22,7 @@
 
 // Finish the code of the function
 function exercise17() {
-    fetch ("https://jsonplaceholder.typicode.com/users/1")
-    .then (res=> res.json())
-    .then (displayContents)
+    fetch("https://jsonplaceholder.typicode.com/users/1").then(resp=> resp.json()).then(displayContents)
 }
 
 // Don’t change the code bellow this line

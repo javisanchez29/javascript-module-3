@@ -20,9 +20,9 @@
 
 // Finish the code of the function
 async function exercise18() {
-    const res = await fetch ('https://jsonplaceholder.typicode.com/users/1')
-    const data = await res.json()
-    displayContents(data)
+    const url = await fetch("https://jsonplaceholder.typicode.com/users/1")
+    const response = await url.json()
+    displayContents(response)
 }
 
 // Don’t change the code bellow this line

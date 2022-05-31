@@ -11,9 +11,7 @@
 
 // Finish the code of the function
 function exercise07() {
-    let func = (a,b => { 
-        return a+b
-    });
+    let func = (a,b)=> a+b;
 
     // Don’t change the code bellow this line
     return func;
